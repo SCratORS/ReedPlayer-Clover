@@ -1,0 +1,1 @@
+ReedPlayer-Clover.exe --language=en_USA --region=EUR --bootapp=usr\share\ui\snes-eur

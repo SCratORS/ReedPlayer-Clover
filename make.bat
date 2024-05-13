@@ -1,0 +1,1 @@
+g++ -O4 *.cpp scripts/*.cpp scripts/app/*.cpp scripts/gui/*.cpp -o ReedPlayer-Clover -std=c++20 -lmingw32 -lSDL2main -lSDL2 -lSDL2_mixer -lOpengl32 -lFreeImage -ljsoncpp 
