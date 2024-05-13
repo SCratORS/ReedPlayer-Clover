@@ -1,0 +1,115 @@
+AnimatorComponent
+CameraComponent
+TextureComponent
+SoundComponent
+LabelComponent
+VisualComponent
+SpriteComponent
+
+
+
+
+у WorldNode должны быть функции
+
+getChildByName(String name)
+addChildNode
+setWorldPosition
+
+createWorldNode(String name)
+
+
+Element elements
+
+
+Element {
+	setZIndex
+}
+
+WorldNode {
+	create()
+	isEnabled
+	setEnabled
+	getLocalPositionX
+	setLocalPositionX
+	getLocalPositionY
+	setLocalPositionY
+	setLocalPosition
+	getLocalPosition
+	getLocalScaleX
+	setLocalScaleX
+	getLocalScaleY
+	setLocalScaleY
+	getLocalRotation
+	setLocalRotation
+	setZIndex
+	setLocalScale
+	getLocalScale
+	setWorldPosition
+	setNewParent
+
+}
+VisualComponent {
+	getColorR
+	setColorR
+	getColorG
+	setColorG
+	getColorB
+	setColorB
+	getAlpha
+	setAlpha
+}
+Component{
+	isEnabled
+	setEnabled
+}
+
+SpriteComponent{
+	create()
+	getSize()
+	setSize()
+}
+
+Node {
+	getNode()
+	getParentNode()
+	attachComponent
+}
+
+
+
+createWorldNode
+getWorldPosition
+disable()
+enable()
+setText
+
+Camera
+screenToWorldPosition
+
+
+
+int Context::getChildByName(lua_State* L)
+{
+	lua_getglobal(L, LUA_ENGINE_ACCESSOR);
+	Engine* engine = static_cast<Engine*>(lua_touserdata(L, -1));
+	
+	//std::cout << lua_gettop(L) << " ";
+	//std::cout << lua_typename(L, lua_type(L, 1)) << " ";
+	//std::cout << lua_typename(L, lua_type(L, 2)) << " ";
+	//std::cout << lua_typename(L, lua_type(L, 3)) << " ";
+	//std::cout << lua_typename(L, lua_type(L, 4)) << " ";
+	//std::cout << lua_typename(L, lua_type(L, 5)) << " ";
+
+	const unsigned vm_x = lua_tointeger(L, 1);
+	const unsigned vm_y = lua_tointeger(L, 2);
+	const std::string title = lua_tostring(L, 3);
+	const bool fullscreen = lua_toboolean(L, 4);
+
+	if(fullscreen)
+		engine->window.create(sf::VideoMode(vm_x, vm_y), title, sf::Style::Fullscreen);
+	else
+		engine->window.create(sf::VideoMode(vm_x, vm_y), title, sf::Style::Close | sf::Style::Titlebar);
+
+	return 0;
+}
+

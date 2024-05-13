@@ -1,0 +1,105 @@
+LinkType{
+	Component
+	WorldNode
+	UnlinkedResource
+	Resource
+}
+
+
+children scriptType
+{
+	WorldNode
+	CursorManager 																							class(WorldNode)
+	DbgMenu 																								class(WorldNode)
+	sys_hud 																								class(WorldNode)
+	sys_resume_float_wing 																					class(WorldNode)
+	sys_resumedummy 																						class(WorldNode)
+	sys_home_floating_cards 																				class(WorldNode)
+	position_changer 																						class(WorldNode)
+	position_changer_node 																					class(WorldNode)
+	sys_popup_warning																						class(WorldNode)
+	dot_number 																								class(WorldNode)
+	sys_sram_icon 																							class(WorldNode)
+	sys_game_card_show 																						class(WorldNode)
+	effect_smoke 																							class(WorldNode)
+	sys_thumbnail_icon 																						class(WorldNode)
+	sys_homemenu_sortorder 																					class(WorldNode)
+	sys_popup_unlock																						class(WorldNode)
+	sys_fade																								class(WorldNode)
+	GUIElement 																								class(WorldNode)
+	GUIRadioGroup 																		class(GUIElement)	class(WorldNode)
+	GUIButton 																			class(GUIElement)	class(WorldNode)
+	gui_container 																		class(GUIElement)	class(WorldNode)
+	sys_copyright 												class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_copyright_text 											class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_homemenu 												class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_option_languages 										class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_option 													class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_option_setting 											class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_menubarU 												class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_gametitlelist   		 								class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_manual 													class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_option_display 											class(gui_container) 	class(GUIElement)	class(WorldNode)
+	sys_resumemenu 												class(gui_container)	class(GUIElement)	class(WorldNode)
+	sys_resume_emptymode										class(gui_container)	class(GUIElement)	class(WorldNode)
+	sys_resume_changemode 										class(gui_container)	class(GUIElement)	class(WorldNode)
+	sys_resume_lockmode											class(gui_container)	class(GUIElement)	class(WorldNode)
+	sys_resumedatalist 											class(gui_container)	class(GUIElement)	class(WorldNode)
+	sys_dialog													class(gui_container) 	class(GUIElement)	class(WorldNode)
+	GUICheckButton 												class(GUIButton)		class(GUIElement)	class(WorldNode)
+	sys_button													class(GUIButton) 	 	class(GUIElement)	class(WorldNode)
+	sys_game_card 												class(GUIButton)		class(GUIElement)	class(WorldNode)
+	sys_option_setting_item 									class(GUIButton)		class(GUIElement)	class(WorldNode)
+	sys_resume_card 											class(GUIButton)		class(GUIElement)	class(WorldNode)
+	sys_button_longpress 				class(sys_button)		class(GUIButton) 	 	class(GUIElement)	class(WorldNode)
+	sys_resume_floating_card 			class(sys_resume_card)	class(GUIButton)		class(GUIElement)	class(WorldNode)
+	sys_option_item 					class(GUICheckButton)	class(GUIButton)		class(GUIElement)	class(WorldNode)
+	sys_menubar_cm
+	sys_cursor
+
+	
+} 
+
+component type:
+
+ScriptComponent {
+	TweenManager		tween_manager.lua
+	GUI 				gui.lua
+	slide_in  			animation/slide_in.lua
+	slide_out_down 		animation/slide_out_down.lua
+	SuspentionPoints 	suspentionpoints.lua
+	Store 				store.lua
+	blink_anim
+	CloverElementsComponent
+	slide_out_up
+	LR_arrow
+	fuwafuwa
+}
+
+SoundComponent {
+	snd_component		class(SoundComponent)
+	SoundComponent
+}
+
+CameraComponent {
+	CameraComponent
+}
+
+LabelComponent {
+	lbl_component		class(LabelComponent)
+	LabelComponent
+}
+
+SpriteComponent {
+	SpriteComponent
+}
+
+AnimatorComponent{
+	AnimatorComponent
+}
+AnimatedSpriteComponent{
+	AnimatedSpriteComponent
+}
+TextureComponent {
+	TextureComponent
+}
