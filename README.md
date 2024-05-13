@@ -27,6 +27,11 @@ Nintendo SNES Classic Mini. Clover Launcher
 - jsoncpp
 
 Для запуска нужны файлы оригинального образа SNES Classic Mini, а именно директория "usr\share\ui\snes-eur" со всем содержимым.
+
+В репозитории находится [](usr.zip) архив, в которой находится нужное содержимое, но без игр.
+
+Также есть [](lua_scripts_decode.zip) архив, содержащий декомпилированные оригинальные Lua скрипты.
+
 Параметры запуска
 
 ReedPlayer-Clover.exe --language=en_USA --region=EUR --bootapp=usr\share\ui\snes-eur
